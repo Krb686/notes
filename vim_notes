@@ -1,0 +1,95 @@
+======== Colon Commands ========
+
+:args					Show args to vim
+:edit <filename>			Edit filename in place
+
+:global :g/pattern/{command}		Run command on pattern.
+
+:saveas <filename>			Save current text as filename
+:set
+	ic
+	patchmode
+:syntax
+	enable
+:help
+:options
+:color <color>
+
+
+======== Splitting Windows ========
+
+	-------- Open --------
+
+		:new			Horizontally split a new empty window.
+		:split			Horizontally split a new window to current file.
+		:split <filename>	Horizontally split a new window to <filename>.
+
+
+		:vnew			Vertically split a new empty window.
+		:vsplit			Vertically split a new window to current file.
+		:vsplit <filename>	Vertically split a new window to <filename>.
+
+
+	-------- Close --------
+
+		:close			Close current window.
+		:only			Close all but current window.
+
+
+	-------- Move and Navigate --------
+
+
+		CTRL-W <direction arrow>	Move to window in <direction arrow>
+		CTRL-W < H | J | K | L >	Move window to LEFT(H), BOTTOM(J), TOP(K), or RIGHT(L).
+
+
+	-------- Size --------
+
+		[#] CTRL-W +	Increase size 1 or # lines
+		[#] CTRL-W -	Decrease size 1 or # lines
+                # CTRL-W _	Set window size to # lines
+
+
+======== Tabbed Windows ========
+
+	:tab split				Create a new tab editing the current file.
+	:tab split <filename>			Create a new tab editing <filename>.
+
+	gt					Cycle through tabs
+
+	
+
+
+======== Letter Commands ========
+
+p	paste
+yy	yank a line
+
+
+======== Modes ========
+
+       	-------- Visual Mode --------
+   
+   		Colon commands operate on visual selection
+   
+   	-------- Visual Block Mode --------
+
+		$				Select to end of all lines.
+		I{text}<Esc>			Insert text on all lines.
+		A{text}<Esc>			Append text to end of selected lines.
+		~				Swap case
+		U				Make selection uppercase
+		u				Make selection lowercase
+		>				Shift selection 1 amount.
+		<				Remove shift 1 amount.
+	
+
+
+======== vimdiff ========
+
+
+	:set noscrollbind		Turn off scroll binding
+
+
+	do				diff obtain
+	dp				diff put
